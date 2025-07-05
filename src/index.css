@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-dark-bg text-white font-inter;
+    margin: 0;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .neon-text {
+    @apply text-neon-blue;
+    text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00d4ff;
+  }
+  
+  .neon-border {
+    @apply border-neon-blue;
+    box-shadow: 0 0 10px #00d4ff, inset 0 0 10px rgba(0, 212, 255, 0.1);
+  }
+  
+  .glass-effect {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-neon-blue via-neon-purple to-neon-green bg-clip-text text-transparent;
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-neon-blue/25;
+  }
+}
