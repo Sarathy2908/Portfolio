@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "server": "node server.js",
     "sheets-server": "node sheets-server.js",
-    "dev:full": "concurrently \"npm run dev\" \"npm run sheets-server\""
+    "dev:full": "concurrently \"npm run dev\" \"npm run sheets-server\" --names \"VITE,SHEETS\" --prefix-colors \"blue,green\""
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
